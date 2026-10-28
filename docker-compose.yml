@@ -1,0 +1,23 @@
+# One Postgres is the only infrastructure. It is the single source of truth:
+# no cache, no Redis, no Kafka (see docs/DECISIONS.md, D-01).
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: dialer
+      POSTGRES_PASSWORD: dialer
+      POSTGRES_DB: dialer
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Creates the separate `dialer_test` database the test-suite wipes freely.
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dialer -d dialer"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  pgdata:

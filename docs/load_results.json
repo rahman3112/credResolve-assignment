@@ -1,0 +1,92 @@
+[
+ {
+  "agents": 100,
+  "workers": 50,
+  "seconds": 10.0,
+  "reservations": 7150,
+  "reservations_per_sec": 712.0,
+  "reserve_ms": {
+   "p50": 34.33,
+   "p95": 45.39,
+   "p99": 55.76,
+   "max": 72.35
+  },
+  "cycle_ms": {
+   "p50": 67.97,
+   "p95": 91.73,
+   "p99": 108.89
+  },
+  "idle_polls": 0,
+  "snapshot_fresh": {
+   "p50_ms": 5.09,
+   "p99_ms": 10.83
+  },
+  "snapshot_after_load": {
+   "p50_ms": 5.33,
+   "p99_ms": 11.04
+  },
+  "calls_rows_after": 7150,
+  "double_booking_violations": 0,
+  "invariants_ok": true
+ },
+ {
+  "agents": 1000,
+  "workers": 50,
+  "seconds": 10.0,
+  "reservations": 7088,
+  "reservations_per_sec": 705.7,
+  "reserve_ms": {
+   "p50": 34.64,
+   "p95": 42.62,
+   "p99": 62.51,
+   "max": 96.5
+  },
+  "cycle_ms": {
+   "p50": 68.59,
+   "p95": 83.67,
+   "p99": 110.35
+  },
+  "idle_polls": 0,
+  "snapshot_fresh": {
+   "p50_ms": 5.7,
+   "p99_ms": 11.15
+  },
+  "snapshot_after_load": {
+   "p50_ms": 5.87,
+   "p99_ms": 9.33
+  },
+  "calls_rows_after": 7088,
+  "double_booking_violations": 0,
+  "invariants_ok": true
+ },
+ {
+  "agents": 10000,
+  "workers": 50,
+  "seconds": 10.0,
+  "reservations": 7120,
+  "reservations_per_sec": 709.1,
+  "reserve_ms": {
+   "p50": 34.59,
+   "p95": 42.26,
+   "p99": 56.18,
+   "max": 89.44
+  },
+  "cycle_ms": {
+   "p50": 68.53,
+   "p95": 84.6,
+   "p99": 105.4
+  },
+  "idle_polls": 0,
+  "snapshot_fresh": {
+   "p50_ms": 7.84,
+   "p99_ms": 13.32
+  },
+  "snapshot_after_load": {
+   "p50_ms": 8.32,
+   "p99_ms": 13.74
+  },
+  "calls_rows_after": 7120,
+  "double_booking_violations": 0,
+  "invariants_ok": true
+ }
+]
